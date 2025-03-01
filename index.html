@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        .history-style{
+            background-color: rgb(98, 98, 238);
+            padding: 8px;
+            color: white;
+            border-radius: 12px;
+            font-size: large;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body id="change-bg" class="bg-blue-50">
@@ -57,7 +67,7 @@
                     </div>
                 </div>
                 <section class=" grid grid-cols-3 mt-10">
-                    <div class="bg-blue-50 p-6 rounded-lg my-3">
+                    <div class="bg-blue-50 p-6 rounded-lg my-3 parent">
                         <button class="bg-white p-2 rounded-lg">shopeEase</button>
                         <h4 class="font-semibold text-2xl my-3">fix Mobile button Isue</h4>
                         <p class="bg-white p-4 rounded-lg">Debug using Chrome DevTools, check for overlappi</p>
@@ -66,10 +76,10 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">21 March 2025</p>
                             </div>
-                            <button id="btn" class="bg-blue-600 px-3 py-2 text-white rounded-lg">Completed</button>
+                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg btn">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-blue-50 p-6 rounded-lg mx-3 my-3">
+                    <div class="bg-blue-50 p-6 rounded-lg mx-3 my-3 parent">
                         <button class="bg-white p-2 rounded-lg">cloudsync</button>
                         <h4 class="font-semibold text-2xl my-3">Add Dark Mode</h4>
                         <p class="bg-white p-4 rounded-lg">store the user's prerference in localstorage,update
@@ -79,10 +89,10 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">21 March 2025</p>
                             </div>
-                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg">Completed</button>
+                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg btn">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-blue-50 p-6 rounded-lg my-3">
+                    <div class="bg-blue-50 p-6 rounded-lg my-3 parent">
                         <button class="bg-white p-2 rounded-lg">swiftpay</button>
                         <h4 class="font-semibold text-2xl my-3">Optimize Home Page</h4>
                         <p class="bg-white p-4 rounded-lg">Debug using Chrome DevTools, check for overlappin</p>
@@ -91,11 +101,11 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">21 March 2025</p>
                             </div>
-                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg">Completed</button>
+                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg btn">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-blue-50 p-6 rounded-lg">
-                        <button class="bg-white p-2 rounded-lg">meta</button>
+                    <div class="bg-blue-50 p-6 rounded-lg parent">
+                        <button id="btn"  class="bg-white p-2 rounded-lg">meta</button>
                         <h4 class="font-semibold text-2xl my-3">Add new emoji</h4>
                         <p class="bg-white p-4 rounded-lg">Debug using Chrome DevTools, check for overlappin</p>
                         <div class="flex items-center gap-6 my-3">
@@ -103,10 +113,10 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">21 March 2025</p>
                             </div>
-                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg">Completed</button>
+                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg btn">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-blue-50 p-6 rounded-lg mx-3">
+                    <div class="bg-blue-50 p-6 rounded-lg mx-3 parent">
                         <button class="bg-white p-2 rounded-lg">Google Llc</button>
                         <h4 class="font-semibold text-2xl my-3">Intregrate OpenAi</h4>
                         <p class="bg-white p-4 rounded-lg">Debug using Chrome DevTools, check for</p>
@@ -115,10 +125,10 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">21 March 2025</p>
                             </div>
-                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg">Completed</button>
+                            <button  class="bg-blue-600 px-3 py-2 text-white rounded-lg btn">Completed</button>
                         </div>
                     </div>
-                    <div class="bg-blue-50 p-6 rounded-lg">
+                    <div class="bg-blue-50 p-6 rounded-lg parent">
                         <button class="bg-white p-2 rounded-lg">Glassdoor</button>
                         <h4 class="font-semibold text-2xl my-3">Improve Job searching</h4>
                         <p class="bg-white p-4 rounded-lg">Debug using Chrome DevTools, check for overlappin</p>
@@ -127,21 +137,27 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">21 March 2025</p>
                             </div>
-                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg">Completed</button>
+                            <button class="bg-blue-600 px-3 py-2 text-white rounded-lg btn">Completed</button>
                         </div>
                     </div>
                 </section>
             </section>
-            <section class="bg-white rounded-2xl w-1/3 flex justify-center">
+            <section class="bg-white rounded-2xl w-1/3 p-3">
                 <div>
-                    <div>
-                        <div class="flex pt-10 gap-6 items-center">
+                    <div class="flex flex-col items-center">
+                        <div class="flex pt-10 gap-6 items-center justify-center">
                             <img src="image/activity.png" alt="activiti">
                             <h2 class="text-lg font-medium">activity log</h2>
                         </div>
-                        <button class="bg-blue-600 text-white px-3 py-2 my-8 rounded-md">clear history</button>
+                        <div>
+                            <button id="clear-history" class="bg-blue-600 text-white px-3 py-2 my-8 rounded-md">clear history</button>
+                        </div>
+                    </div>
+                    <div id="history-list">
+                        
                     </div>
                 </div>
+                
             </section>
         </section>
     </main>
