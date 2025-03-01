@@ -26,6 +26,7 @@ let historylist = document.getElementById
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () {
         this.disabled = true;
+        buttons[i].style.backgroundColor='gray'
         changeplus = changeplus + 1;
         plus.innerText = changeplus;
         changemainas = changemainas - 1;
@@ -34,15 +35,19 @@ for (let i = 0; i < buttons.length; i++) {
         let title = parentdiv.querySelector('h4').innerText;
     
         let newitem = document.createElement('p');
+        if(i === buttons.length-1){
+            alert('congrates !!! you have completed all the current task')
+        }
 
         alert('board update succesfully')
+
         // time
         let time = new Date()
         let hour = time.getHours();
         let minutes = time.getMinutes()
         let second = time.getSeconds();
-        let ampm = hour >= 12 ? 'pm' : 'am'
-        let currenttime = `${hour}:${minutes}:${second}:${ampm}`
+        let ampm = hour >= 12 ? ' pm' : ' am'
+        let currenttime = `${hour} : ${minutes} : ${second} : ${ampm}`
 
 
         newitem.classList.add('history-style')
@@ -55,3 +60,6 @@ document.getElementById('clear-history').addEventListener('click', function () {
     historylist.innerText=''
 
 })
+let date = new Date()
+let newtime = document.getElementById('date')
+newtime.innerText=date.toDateString()
